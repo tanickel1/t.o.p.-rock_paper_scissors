@@ -5,9 +5,9 @@ let computerScore = 0;
 let playerSelection = " ";
 let  roundWinner = " ";
  
-function game(){
-    for(let i = 0, i <= 5, i++){
-        round()
+function game() {
+    for (let i = 0; i <= 5; i++) {
+        round();
     }
 }
 
@@ -40,26 +40,28 @@ function round() {
 }
 
 function validateInput (choice){
-    if choices.includes(choice) {
-        return true;
-    }
+     return choices.includes(choice);
 };
 
 function verifyResults(playerSelection,computerSelection){
     if(computerSelection === playerSelection){
         return "Tie";
-    } else if(computerSelection === "Rock" && playerSelection === "Paper") ||
+    } else if(
+        (computerSelection === "Rock" && playerSelection === "Paper") ||
         (computerSelection === "Paper" && playerSelection === "Scissors") ||
-        (computerSelection === "Scissors" && playerSelection === "Rock") { 
-            return "Player Wins!";
-    } else if (computerSelection === "Paper" && playerSelection === "Rock") ||
+        (computerSelection === "Scissors" && playerSelection === "Rock") 
+    ){ 
+        return "Player Wins!";
+    } else if (
+        (computerSelection === "Paper" && playerSelection === "Rock") ||
         (computerSelection === "Scissors" && playerSelection === "Paper") ||
-        (computerSelection === "Rock" && playerSelection === "Scissors") {
+        (computerSelection === "Rock" && playerSelection === "Scissors") 
+    ) {
         return "Computer Wins!"
     } else {
         return "Error"
     }
-};
+}
 
 game();
 
