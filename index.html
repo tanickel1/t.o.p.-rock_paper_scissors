@@ -8,11 +8,32 @@
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-    <div class="flex-container">
-        <h1>Rock, Paper, Scissors</h1>
-        <button onclick="game()">Start Game</button>
+    <div class="score">
+        <h1 class="ties">Ties: 0</h1>
     </div>
-    
-    <script src="app.js"> </script>
+    <div class="winnerDiv">
+        <h1 class="winner"></h1>
+        <button class="reset" onclick="restartGame()">Play Again</button>
+    </div>
+    <div class="playerSelection">
+        <h3 class="playerChoice"></h3>
+        <h3 class="playScore">Score: 0</h3>
+        <div class="playerImg">
+            <img src="./assets/rock.png" alt="rock" class="pImg" id="rock">
+            <img src="./assets/paper.png" alt="paper" class="pImg" id="paper">
+            <img src="./assets/scissors.png" alt="scissors" class="pImg" id="scissors"> 
+        </div>
+
+    </div>
+    <div class="computerSelection">
+        <h3 class="computerChoice"></h3>
+        <h3 class="computerScore">Score :0</h3>
+        <div class="computerImg">
+            <img src="./assets/rock.png" alt="rock" class="pImg" id="rock">
+            <img src="./assets/paper.png" alt="paper" class="pImg" id="paper">
+            <img src="./assets/scissors.png" alt="scissors" class="pImg" id="scissors"> 
+        </div>
+    </div>
 </body>
+<script src="app.js"> </script>
 </html>
