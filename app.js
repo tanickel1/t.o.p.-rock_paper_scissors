@@ -2,6 +2,14 @@ const choices = ["rock", "paper", "scissors"];
 const winners = [];
  
 function resetGame(){
+    winners = [];
+    document.querySelector(".playerScore").textContent = "Score: 0";
+    document.querySelector(".computerScore").textContent = "Score: 0";
+    document.querySelector(".ties").textContent = "Ties: 0";
+    document.querySelector(".winner").textContent = "";
+    document.querySelector(".playerChoice").textContent = "";
+    document.querySelector(".computerChoice").textContent = "";
+    document.querySelector(".reset").style.disple = "none";
 
 };
 
