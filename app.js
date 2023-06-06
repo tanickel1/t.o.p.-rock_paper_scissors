@@ -15,30 +15,30 @@ function resetGame(){
 
 
 function game() {
-    let imgs = document.querySelectorAll('img')
+    let imgs = document.querySelectorAll('img');
     imgs.forEach((img) => 
-    img.addEventListener(('click'), () => {
-        if(img.id){
+        img.addEventListener('click', () => {
+            if(img.id){
             playRound(img.id)
         }
-    })) 
-
-};
+     })
+    );
+}
 
 function playRound(playerChoice) {
     let wins = checkWins();
-    if (wins >= 5){
-        return
+    if (wins >= 5) {
+        return;
     }
     
     const computerSelect = computerChoice();
 
-    const winner = checkWinner(playerChoice);
+    const winner = checkWinner(playerChoice, computerChoice);
     winners.push(winner);
     tallyWins();
     displayRound(computerChoice, playerChoice, winner);
     wins = checkWins();
-    if(wins ==5){
+    if(wins == 5){
         displayEnd();
     }
 };
